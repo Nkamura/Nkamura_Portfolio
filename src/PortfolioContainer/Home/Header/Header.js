@@ -4,9 +4,8 @@ import {
   GET_SCREEN_INDEX,
 } from "../../../utilities/commomUtils";
 import ScrollService from "../../../utilities/ScrollService";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"; // IMPORTAÇÃO DO ÍCONE FA-TIMES
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./Header.css";
 
 export default function Header() {
@@ -65,7 +64,7 @@ export default function Header() {
           className="header-hamburger"
           onClick={() => setHeaderOptions(!showHeaderOptions)}
         >
-          <FontAwesomeIcon className="header-hamburger" icon={faBars} />
+          <FontAwesomeIcon className="header-hamburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
           <span>Nkamura</span>
@@ -77,6 +76,11 @@ export default function Header() {
               : "header-options"
           }
         >
+          {showHeaderOptions && ( // ADICIONADO ÍCONE DE SAÍDA PARA FECHAR O MENU
+            <div className="header-close" onClick={() => setHeaderOptions(false)}>
+              <FontAwesomeIcon icon={faTimes} className="header-close-icon" />
+            </div>
+          )}
           {getHeaderOptions()}
         </div>
       </div>
