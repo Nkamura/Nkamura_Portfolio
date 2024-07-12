@@ -5,10 +5,12 @@ import "./Profile.css";
 export default function Profile() {
   const [typeEffect] = useTypewriter({
     words: [
-      "\u00A0Cybersecurity Enthusiast",
-      "\u00A0Knowledge-hungry Dev",
-      "\u00A0Continuous Learner",
-      " Code Explorer",
+      "\u00A0Developer",
+      "\u00A0Innovator",
+      "\u00A0Learner",
+      "\u00A0Programmer",
+      "\u00A0Hacker",
+      "\u00A0Researcher",
     ].map((word) => word + " "),
     loop: {},
     typeSpeed: 100,
