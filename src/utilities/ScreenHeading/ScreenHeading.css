@@ -1,4 +1,4 @@
-.head-container{
+.heading-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,12 +9,12 @@
 .screen-sub-heading{
     letter-spacing: 3px;
     margin: 8px 0 8px 0;
-    font-size: 12px;
+    font-size: 15px;
     color: var(--black);
 }
 
 .screen-heading{
-    font-size: 32px;
+    font-size: 45px;
     color: #1f2235;
     font-family: "Poppins Bold";
 }
@@ -33,13 +33,14 @@
     background-color: #1f2235;
 }
 
-.separator-blob{
+.separator-blob {
     height: 10px;
     width: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
-}
+    top: -4px;
+  }
 
 .separator-blob div{
     width: 35px;

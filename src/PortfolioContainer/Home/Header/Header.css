@@ -23,7 +23,7 @@
   position: relative;
 }
 .header-option {
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -36,7 +36,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: rgb(53, 147, 190);
+  color: rgb(66, 68, 168);
 }
 .header-close {
   display: none;
