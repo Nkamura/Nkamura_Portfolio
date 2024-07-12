@@ -1,0 +1,139 @@
+.profile-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    min-height: fit-content;
+    }
+
+.profile-parent{
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.profile-details-name{
+    font-size: 20px;
+    font-family:"Poppins SemiBold";
+}
+
+.profile-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24px 0;
+}
+
+.primary-text{
+    color: (--white);   
+}
+
+
+.profile-role-tagline{
+    font-size: 22px;
+    margin: 5px 0 0 0px;
+    font-family: "Popp  ins Light"; 
+}
+
+.profile-options .primary-btn{
+    margin: 22px 0 20px 0px;
+}
+
+.profile-options .highlighted-btn{
+    margin: 22px 0 20px 40px;
+}
+
+.profile-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0 0 var(--white);
+    border-radius: 50%;
+    height: 390px;
+    width: 390px;
+    margin: 0 0 25px 100px;
+    overflow: hidden;
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.profile-picture-background{
+    height: 96%;
+    width: 96%;
+    background-image: url('../../../assets/Home/Gustavo.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
+.colz .colz-icon i {
+    color: white;
+    padding-left: 0px;
+    padding: 8px;
+}
+
+.colz .colz-icon i:hover{
+    transform: scale(1.6);
+}
+
+@media screen and (max-width:1110px){
+    .profile-picture{
+        margin: 0 0px 0 80px;
+    }
+    .profile-details-name{
+        font-size: 20px;
+    }
+    .profile-details-role{
+        font-size: 12px;
+    }
+    .profile-options .btn{
+        width: 120px;
+        padding: 11px 0;
+        z-index: 700;
+    }
+}
+
+@media screen and (max-width:910px){
+    .profile-picture{
+        height: 320px;
+        width: 320px;
+        margin: 0 0 0 4px;
+    }
+}
+
+@media screen and (max-width:810px){
+    .profile-picture{
+        margin: 0 !important;
+    }
+    .profile-parent{
+        flex-direction: column-reverse;
+        margin: 40px 0 0 0;
+    }
+    .profile-options{
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile-details{
+        margin: 25px 0 0;
+    }
+    profile.profile-options .highlighted-btn{
+        margin: 0 !important;
+    }
+    .profile-options, .profile-details-role{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:375px){
+    .profile-picture{
+        height: 275px;
+        width: 275px;
+        margin-top: -90px;
+    }
+    .profile-details{
+        width: 90%;
+    }
+}
