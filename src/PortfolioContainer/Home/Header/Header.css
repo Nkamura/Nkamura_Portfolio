@@ -36,7 +36,7 @@
   color: var(--white);
 }
 .selected-header-option {
-  color: rgb(66, 68, 168);
+  color: rgb(0, 129, 189);
 }
 .header-close {
   display: none;
