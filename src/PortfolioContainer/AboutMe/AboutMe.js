@@ -52,7 +52,9 @@ export default function AboutMe(props) {
               {SCREEN_CONSTANTS.description}
             </span>
             <div className='about-me-highlights'>
-              <span>{SCREEN_CONSTANTS.highlights.heading}</span>
+              <div className='highlight-heading'>
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
+              </div>
               {renderHighLight()}
             </div>
             <div className='about-me-options'>

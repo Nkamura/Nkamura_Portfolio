@@ -31,21 +31,21 @@
 .about-me-details {
     width: 55%;
     text-align: justify;
-    padding: 50px;
+    padding: 60px;
 }
 
 .about-me-description {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .about-me-highlights {
-    margin: 80px 0;
+    margin: 40px 0;
 }
 
 .highlight-heading {
     font-family: "Poppins Bold";
-    font-size: 14px;
-    margin: 0 0 5px 0;
+    font-size: 17px;
+    margin: 0px 0 8px 0;
 }
 
 .highlights {
