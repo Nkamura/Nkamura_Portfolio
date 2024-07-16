@@ -88,9 +88,11 @@ export default function Profile() {
             </a>
           </div>
         </div>
+        <a href="https://www.linkedin.com/in/gustavo-riodi-nakamura/" target="blank"> 
         <div className="profile-picture">
           <div className="profile-picture-background"></div>
         </div>
+        </a>
       </div>
     </div>
   );

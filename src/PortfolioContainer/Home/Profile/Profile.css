@@ -57,7 +57,16 @@
     max-height: 100%;
 }
 
-.profile-picture-background{
+.profile-picture-container {
+    perspective: 1000px; /* Adiciona uma perspectiva para o efeito 3D */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .profile-picture-background {
     height: 96%;
     width: 96%;
     background-image: url('../../../assets/Home/Gustavo.jpg');
@@ -65,9 +74,12 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    
-}
-
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o efeito */
+  }
+  
+  .profile-picture-background:hover {
+    transform: scale(1.03); /* Aumenta o tamanho da imagem em 5% */
+  }
 
 .colz .colz-icon i {
     color: white;
