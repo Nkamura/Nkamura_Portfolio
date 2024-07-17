@@ -77,7 +77,10 @@ export default function Header() {
           }
         >
           {showHeaderOptions && ( // ADICIONADO ÍCONE DE SAÍDA PARA FECHAR O MENU
-            <div className="header-close" onClick={() => setHeaderOptions(false)}>
+            <div
+              className="header-close"
+              onClick={() => setHeaderOptions(false)}
+            >
               <FontAwesomeIcon icon={faTimes} className="header-close-icon" />
             </div>
           )}
