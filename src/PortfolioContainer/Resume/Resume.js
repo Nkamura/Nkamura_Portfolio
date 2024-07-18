@@ -31,6 +31,10 @@ export default function Resume(props) {
     </div>;
   };
 
+  const resumeBullets = [
+    {label: "Education", logoSrc: "education.svg"}
+  ]
+
   let fadeInScreenHandler = (screen) => {
     if (screen.FadeScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
