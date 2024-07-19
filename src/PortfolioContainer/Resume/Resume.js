@@ -13,7 +13,8 @@ export default function Resume(props) {
     Animations.animations.fadeInScreen(props.id);
   };
 
-  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  const fadeInSubscription =
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const ResumeHeading = (props) => {
     return (
@@ -23,7 +24,7 @@ export default function Resume(props) {
             <span>{props.heading ? props.heading : ""}</span>
             {props.fromDate && props.toDate ? (
               <div className="heading-date">
-                {props.fromDate + "_" + props.toDate}
+                {props.fromDate + " - " + props.toDate}
               </div>
             ) : (
               <div></div>
@@ -45,15 +46,17 @@ export default function Resume(props) {
     { label: "Work History", logoSrc: "work-history.svg" },
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" }
+    { label: "Interests", logoSrc: "interests.svg" },
   ];
 
   const programmingSkillDetails = [
-    { skill: "OutSystems", ratingPercentage: 85 },
+    { skill: "C", ratingPercentage: 85 },
+    { skill: "Java", ratingPercentage: 85 },
+    { skill: "Outsystems", ratingPercentage: 85 },
+    { skill: "Python", ratingPercentage: 85 },
     { skill: "React", ratingPercentage: 85 },
-    { skill: "JavaScript", ratingPercentage: 80 },
-    { skill: "Node.js", ratingPercentage: 75 },
-    { skill: "Python", ratingPercentage: 70 }
+    { skill: "HTML & CSS", ratingPercentage: 85 },
+    { skill: "SQL", ratingPercentage: 85 },
   ];
 
   const projectsDetails = [
@@ -68,76 +71,64 @@ export default function Resume(props) {
       title: "Mobile E-shop",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "An ecommerce application designed to sell products online with payment system integration",
+        "An ecommerce application designed to sell products online with payment system integration.",
       subHeading:
-        "Technologies Used: React Native, MongoDB, Express.js, Node.js, Redux.",
+        "Technologies Used: React Native, MongoDB, Express JS, Node JS, Redux.",
     },
     {
       title: "Ecommerce Website",
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "Online ecommerce website for showcasing and selling products online with payment system integration, both Paypal and Stripe",
+        "Online ecommerce website for showcasing and selling products online with payment system integration, both Paypal and Stripe.",
       subHeading:
-        "Technologies Used: MongoDB, Express.js, React.js, Node.js, Redux, Bootstrap.",
+        "Technologies Used: MongoDB, Express JS, React JS, Node JS, Redux, Bootstrap.",
     },
   ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"University of Legon Accra, Ghana"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
+        heading={"Federal University of Technology - Paraná"}
+        subHeading={"BACHELOR OF INFORMATION SYSTEMS"}
+        fromDate={"2023"}
+        toDate={"2026"}
       />
       <ResumeHeading
-        heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technology, Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
-      />
-      <ResumeHeading
-        heading={"High School"}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        heading={"Federal University of Technology - Paraná"}
+        subHeading={"Engineering (Not Completed)"}
+        description={
+          "Started Computer Engineering but did not complete as I did not find much utility for me in the electronics part."
+        }
+        fromDate={"2017"}
+        toDate={"2023"}
       />
     </div>,
 
+    /* WORK EXPERIENCE */
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
           heading={"ExxonMobil"}
-          subHeading={"Vendor Manager Advisor"}
+          subHeading={"Vendor Manager Trainee"}
           fromDate={"2023"}
           toDate={"Present"}
+          description={
+            "Responsible for code maintenance, bug fixing, and monitoring contracts between ExxonMobil and global vendors, using technologies such as Python, SQL, OutSystems, PowerBI, Tableau, HTML, and CSS."
+          }
         />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on Udemy.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Integrated the web app with backend services to create new user
-            onboarding application with dynamic form content.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - I stretch my mental capacity to develop UI as per the given
-            designs.
-          </span>
-          <br />
-        </div>
+        <ResumeHeading
+          heading={"Federal University of Technology - Paraná"}
+          subHeading={"Intern"}
+          fromDate={"2019"}
+          toDate={"2020"}
+          description={
+            "Assisted in the development of combined spreadsheets for equipment maintenance control; attended to service orders in the sector; performed administrative routines and provided IT support."
+          }
+        />
       </div>
     </div>,
 
+    /* PROGRAMMING SKILLS */
     <div
       className="resume-screen-container programming-skills-container"
       key="programming-skills"
@@ -156,40 +147,44 @@ export default function Resume(props) {
       ))}
     </div>,
 
+    /* PROJECTS */
     <div className="resume-screen-container" key="projects">
-      {projectsDetails.map((projectsDetails, index) => (
+      {projectsDetails.map((projectDetail, index) => (
         <ResumeHeading
           key={index}
-          heading={projectsDetails.title}
-          subHeading={projectsDetails.subHeading}
-          description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
+          heading={projectDetail.title}
+          subHeading={projectDetail.subHeading}
+          description={projectDetail.description}
+          fromDate={projectDetail.duration.fromDate}
+          toDate={projectDetail.duration.toDate}
         />
       ))}
     </div>,
 
+    /* Interests */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
-        heading="Teaching"
-        description="Apart from being a tech enthusiast and a code writer, I also love to teach people what I know simply because I believe in sharing."
+        heading="Gym"
+        description="I enjoy working out at the gym to maintain a healthy lifestyle and relieve stress."
       />
       <ResumeHeading
         heading="Music"
-        description="Listening to soothing music is something I can never compromise with, skimming through Spotify's pop songs charts is at times the best stress reliever that I can get my hands on."
+        description="Listening to music is a great way for me to relax and unwind. I enjoy exploring new genres and artists."
       />
       <ResumeHeading
-        heading="Competitive Gaming"
-        description="I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most."
+        heading="Walking and Biking"
+        description="I love spending time outdoors, walking, and biking to explore new places and stay active."
       />
     </div>,
   ];
 
   const handleCarousal = (index) => {
     let offsetHeight = 360;
+
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
     };
+
     setCarousalOffsetStyle(newCarousalOffset);
     setSelectedBulletIndex(index);
   };
@@ -226,9 +221,11 @@ export default function Resume(props) {
 
   useEffect(() => {
     return () => {
+      /* UNSUBSCRIBE THE SUBSCRIPTIONS */
       fadeInSubscription.unsubscribe();
     };
   }, [fadeInSubscription]);
+
   return (
     <div className="resume-container screen-container" id={props.id || ""}>
       <div className="resume-content">
