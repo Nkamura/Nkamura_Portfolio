@@ -84,8 +84,8 @@ export default function Resume(props) {
         "Technologies Used: MongoDB, Express JS, React JS, Node JS, Redux, Bootstrap.",
     },
   ];
-
   const resumeDetails = [
+    /* EDUCATION */
     <div className="resume-screen-container" key="education">
       <ResumeHeading
         heading={"Federal University of Technology - Paraná"}
@@ -109,22 +109,54 @@ export default function Resume(props) {
       <div className="experience-container">
         <ResumeHeading
           heading={"ExxonMobil"}
+          subHeading={"Vendor Manager Office Intern"}
+          fromDate={"2023"}
+          toDate={"Present"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Currently working in the Vendor Manager Office, handling code maintenance, bug fixing, and overseeing the work of others.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Responsible for maintaining code and fixing bugs in Python, SQL, OutSystems, HTML, and CSS.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Involved in a project tracking contracts between ExxonMobil and external vendors, from start to finish.
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>,
+
+    /* WORK EXPERIENCE */
+    <div className="resume-screen-container" key="work-experience">
+      <div className="experience-container">
+        <div className="experience-description">
+        <ResumeHeading
+          heading={"ExxonMobil"}
           subHeading={"Vendor Manager Trainee"}
           fromDate={"2023"}
           toDate={"Present"}
-          description={
-            "Responsible for code maintenance, bug fixing, and monitoring contracts between ExxonMobil and global vendors, using technologies such as Python, SQL, OutSystems, PowerBI, Tableau, HTML, and CSS."
-          }
         />
+          <span className="resume-description-text">
+          "Responsible for code maintenance, bug fixing, and monitoring contracts between ExxonMobil and global vendors, using technologies such as Python, SQL, OutSystems, PowerBI, Tableau, HTML, and CSS."
+          </span>
+        </div>
+        
+        <div className="experience-description">
         <ResumeHeading
-          heading={"Federal University of Technology - Paraná"}
-          subHeading={"Intern"}
-          fromDate={"2019"}
-          toDate={"2020"}
-          description={
-            "Assisted in the development of combined spreadsheets for equipment maintenance control; attended to service orders in the sector; performed administrative routines and provided IT support."
-          }
+          heading={"ExxonMobil"}
+          subHeading={"Vendor Manager Trainee"}
+          fromDate={"2023"}
+          toDate={"Present"}
         />
+          <span className="resume-description-text">
+          "Assisted in the development of combined spreadsheets for equipment maintenance control; attended to service orders in the sector; performed administrative routines and provided IT support."
+          </span>
+        </div>
       </div>
     </div>,
 
