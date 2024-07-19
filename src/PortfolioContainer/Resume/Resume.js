@@ -223,7 +223,7 @@ export default function Resume(props) {
         <img
           className="bullet-logo"
           src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-          alt="B"
+          alt="s"
         />
         <span className="bullet-label">{bullet.label}</span>
       </div>
