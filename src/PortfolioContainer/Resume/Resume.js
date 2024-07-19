@@ -16,15 +16,15 @@ export default function Resume(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const ResumeHeading = (props) => {
-    return (
-      <div className="resume-heading">
-        <div className="resume-main-heading">
-          <div className="heading-bullet">
+    const ResumeHeading = (props) => {
+      return (
+        <div className="resume-heading">
+          <div className="resume-main-heading">
+            <div className="heading-bullet"></div>
             <span>{props.heading ? props.heading : ""}</span>
             {props.fromDate && props.toDate ? (
               <div className="heading-date">
-                {props.fromDate + " - " + props.toDate}
+                {props.fromDate + "-" + props.toDate}
               </div>
             ) : (
               <div></div>
@@ -37,9 +37,8 @@ export default function Resume(props) {
             <span>{props.description ? props.description : ""}</span>
           </div>
         </div>
-      </div>
-    );
-  };
+      );
+    };
 
   const resumeBullets = [
     { label: "Education", logoSrc: "education.svg" },
@@ -84,6 +83,7 @@ export default function Resume(props) {
         "Technologies Used: MongoDB, Express JS, React JS, Node JS, Redux, Bootstrap.",
     },
   ];
+
   const resumeDetails = [
     /* EDUCATION */
     <div className="resume-screen-container" key="education">
@@ -97,7 +97,7 @@ export default function Resume(props) {
         heading={"Federal University of Technology - Paraná"}
         subHeading={"Engineering (Not Completed)"}
         description={
-          "Started Computer Engineering but did not complete as I did not find much utility for me in the electronics part."
+          "T#ESTESATTWE."
         }
         fromDate={"2017"}
         toDate={"2023"}
@@ -129,35 +129,25 @@ export default function Resume(props) {
           <br />
         </div>
       </div>
-    </div>,
-
-    /* WORK EXPERIENCE */
-    <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
-        <div className="experience-description">
-        <ResumeHeading
-          heading={"ExxonMobil"}
-          subHeading={"Vendor Manager Trainee"}
-          fromDate={"2023"}
-          toDate={"Present"}
-        />
-          <span className="resume-description-text">
-          "Responsible for code maintenance, bug fixing, and monitoring contracts between ExxonMobil and global vendors, using technologies such as Python, SQL, OutSystems, PowerBI, Tableau, HTML, and CSS."
-          </span>
-        </div>
-        
-        <div className="experience-description">
-        <ResumeHeading
-          heading={"ExxonMobil"}
-          subHeading={"Vendor Manager Trainee"}
-          fromDate={"2023"}
-          toDate={"Present"}
-        />
-          <span className="resume-description-text">
-          "Assisted in the development of combined spreadsheets for equipment maintenance control; attended to service orders in the sector; performed administrative routines and provided IT support."
-          </span>
-        </div>
-      </div>
+  <ResumeHeading
+    heading={"Federal University of Technology - Paraná"}
+    subHeading={"Intern"}
+    fromDate={"August 2019"}
+    toDate={"March 2020"}
+  />
+  <div className="experience-description">
+    <span className="resume-description-text">
+      Assisted in developing combined spreadsheets for equipment maintenance control and attended to service orders from the department.
+    </span>
+  </div>
+  <div className="experience-description">
+    <span className="resume-description-text">
+      - Executed administrative routines and provided support to the IT department.
+    </span>
+  </div>
+</div>
+
     </div>,
 
     /* PROGRAMMING SKILLS */
@@ -181,19 +171,19 @@ export default function Resume(props) {
 
     /* PROJECTS */
     <div className="resume-screen-container" key="projects">
-      {projectsDetails.map((projectDetail, index) => (
+      {projectsDetails.map((projectDetails, index) => (
         <ResumeHeading
           key={index}
-          heading={projectDetail.title}
-          subHeading={projectDetail.subHeading}
-          description={projectDetail.description}
-          fromDate={projectDetail.duration.fromDate}
-          toDate={projectDetail.duration.toDate}
+          heading={projectDetails.title}
+          subHeading={projectDetails.subHeading}
+          description={projectDetails.description}
+          fromDate={projectDetails.duration.fromDate}
+          toDate={projectDetails.duration.toDate}
         />
       ))}
     </div>,
 
-    /* Interests */
+    /* INTERESTS */
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
         heading="Gym"
