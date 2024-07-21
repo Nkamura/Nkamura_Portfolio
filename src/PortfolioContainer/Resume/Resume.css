@@ -67,7 +67,7 @@
   }
   
   .bullet-label {
-    font-size: 14px;
+    font-size: 15px;
     white-space: nowrap;
     font-family: "Poppins SemiBold";
   }
@@ -78,10 +78,11 @@
   }
   
   .bullet-icons {
-    width: 34px;
+    width: 40px;
     height: 100%;
     z-index: 1;
     background-color: #1f2235;
+    margin-left: -2px;
     position: absolute;
   }
   
@@ -111,7 +112,7 @@
   
   .resume-main-heading span {
     color: var(--dark-orange);
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Poppins SemiBold";
   }
   
@@ -124,7 +125,7 @@
     left: -25px;
     height: 12px;
     width: 12px;
-    top: 6px;
+    top: 8px;
     border-radius: 50%;
     background-color: rgb(29, 14, 71);
   }
