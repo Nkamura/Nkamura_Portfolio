@@ -121,10 +121,10 @@
   
   .heading-bullet {
     position: absolute;
-    left: -30px;
-    height: 15px;
-    width: 15px;
-    top: 5px;
+    left: -25px;
+    height: 12px;
+    width: 12px;
+    top: 6px;
     border-radius: 50%;
     background-color: rgb(29, 14, 71);
   }

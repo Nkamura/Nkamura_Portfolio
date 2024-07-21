@@ -4,6 +4,13 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 
+// Importação estática dos SVGs
+import EducationIcon from "../../assets/Resume/education.svg";
+import WorkHistoryIcon from "../../assets/Resume/work-history.svg";
+import ProgrammingSkillsIcon from "../../assets/Resume/programming-skills.svg";
+import ProjectsIcon from "../../assets/Resume/projects.svg";
+import InterestsIcon from "../../assets/Resume/interests.svg";
+
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
@@ -16,36 +23,36 @@ export default function Resume(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-    const ResumeHeading = (props) => {
-      return (
-        <div className="resume-heading">
-          <div className="resume-main-heading">
-            <div className="heading-bullet"></div>
-            <span>{props.heading ? props.heading : ""}</span>
-            {props.fromDate && props.toDate ? (
-              <div className="heading-date">
-                {props.fromDate + "-" + props.toDate}
-              </div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          <div className="resume-sub-heading">
-            <span>{props.subHeading ? props.subHeading : ""}</span>
-          </div>
-          <div className="resume-heading-description">
-            <span>{props.description ? props.description : ""}</span>
-          </div>
+  const ResumeHeading = (props) => {
+    return (
+      <div className="resume-heading">
+        <div className="resume-main-heading">
+          <div className="heading-bullet"></div>
+          <span>{props.heading ? props.heading : ""}</span>
+          {props.fromDate && props.toDate ? (
+            <div className="heading-date">
+              {props.fromDate + "-" + props.toDate}
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
-      );
-    };
+        <div className="resume-sub-heading">
+          <span>{props.subHeading ? props.subHeading : ""}</span>
+        </div>
+        <div className="resume-heading-description">
+          <span>{props.description ? props.description : ""}</span>
+        </div>
+      </div>
+    );
+  };
 
   const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
+    { label: "Education", logoSrc: EducationIcon },
+    { label: "Work History", logoSrc: WorkHistoryIcon },
+    { label: "Programming Skills", logoSrc: ProgrammingSkillsIcon },
+    { label: "Projects", logoSrc: ProjectsIcon },
+    { label: "Interests", logoSrc: InterestsIcon },
   ];
 
   const programmingSkillDetails = [
@@ -96,9 +103,7 @@ export default function Resume(props) {
       <ResumeHeading
         heading={"Federal University of Technology - Paraná"}
         subHeading={"Engineering (Not Completed)"}
-        description={
-          "T#ESTESATTWE."
-        }
+        description={"T#ESTESATTWE."}
         fromDate={"2017"}
         toDate={"2023"}
       />
@@ -130,24 +135,23 @@ export default function Resume(props) {
         </div>
       </div>
       <div className="experience-container">
-  <ResumeHeading
-    heading={"Federal University of Technology - Paraná"}
-    subHeading={"Intern"}
-    fromDate={"August 2019"}
-    toDate={"March 2020"}
-  />
-  <div className="experience-description">
-    <span className="resume-description-text">
-      Assisted in developing combined spreadsheets for equipment maintenance control and attended to service orders from the department.
-    </span>
-  </div>
-  <div className="experience-description">
-    <span className="resume-description-text">
-      - Executed administrative routines and provided support to the IT department.
-    </span>
-  </div>
-</div>
-
+        <ResumeHeading
+          heading={"Federal University of Technology - Paraná"}
+          subHeading={"Intern"}
+          fromDate={"August 2019"}
+          toDate={"March 2020"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Assisted in developing combined spreadsheets for equipment maintenance control and attended to service orders from the department.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Executed administrative routines and provided support to the IT department.
+          </span>
+        </div>
+      </div>
     </div>,
 
     /* PROGRAMMING SKILLS */
@@ -222,8 +226,8 @@ export default function Resume(props) {
       >
         <img
           className="bullet-logo"
-          src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
-          alt="s"
+          src={bullet.logoSrc}
+          alt={bullet.label}
         />
         <span className="bullet-label">{bullet.label}</span>
       </div>
