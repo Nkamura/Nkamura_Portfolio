@@ -5,7 +5,7 @@
     justify-content: center;
     min-height: fit-content;
     margin: 60px 0;
-  }
+  } 
   
   .resume-card {
     display: flex;
@@ -14,7 +14,7 @@
   }
   
   .resume-bullets {
-    box-shadow: 15px 0 9px -15px #1f2235;
+    box-shadow: 15px 0 12px -15px #201835;
     height: 100%;
     width: 320px;
   }
@@ -48,7 +48,7 @@
   }
   
   .bullets {
-    width: 86%;
+    width: 85%;
     position: relative;
     z-index: 2;
   }
@@ -59,7 +59,7 @@
     cursor: pointer;
     background-color: #1f2235;
     height: 40px;
-    margin: 15px 0;
+    margin: 22px 0;
     padding: 0 8px;
     border-radius: 20px;
     width: 30px;
@@ -67,7 +67,7 @@
   }
   
   .bullet-label {
-    font-size: 15px;
+    font-size: 14px;
     white-space: nowrap;
     font-family: "Poppins SemiBold";
   }
