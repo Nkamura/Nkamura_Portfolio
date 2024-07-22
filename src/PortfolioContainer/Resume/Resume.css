@@ -194,3 +194,39 @@
     padding: 0 0 0 70px;
   }
 }
+
+@media only screen and (max-width: 1023px) {
+  .resume-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bullets {
+    width: 90%;
+  }
+
+  .resume-card {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    align-items: center;
+    width: 90%;
+  }
+
+  .resume-bullet-details {
+    height: 360px;
+    padding: 0;
+    width: fit-content;
+  }
+
+  .resume-bullets {
+    margin: 30px 0;
+    width: 100%;
+  }
+
+  .selected-bullet {
+    width: 100%;
+  }
+}
