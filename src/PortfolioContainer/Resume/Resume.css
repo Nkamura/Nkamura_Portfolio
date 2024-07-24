@@ -173,7 +173,7 @@
   }
   
   .skill-percentage .active-percentage-bar {
-    height: 15px;
+    height: 16px;
     transition: 0.8s ease;
     position: absolute;
     background-color: #1f2235;
@@ -216,7 +216,7 @@
   }
 
   .resume-bullet-details {
-    height: 360px;
+    height: 365px;
     padding: 0;
     width: fit-content;
   }
