@@ -32,7 +32,7 @@ export default function Projects(props) {
                 <div className='project-item'>
                   <div className='project-comments'>
                     <p>
-                      lorem lorem lorem lorem lorem
+                      This project as develop for the colleger project.
                     </p>
                   </div>
                 </div>
