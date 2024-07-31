@@ -24,7 +24,12 @@ export default function Projects(props) {
         title={'Projects'}
         subHeading={'My projects'}
       />
-      <section className='projects-section' id={props.id || ''}></section>
+      <section className='projects-section' id={props.id || ''}>
+        <div className='container'>
+          <div className='row'>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
