@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactOwlCarousel from 'react-owl-carousel'
+import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
@@ -27,6 +27,17 @@ export default function Projects(props) {
       <section className='projects-section' id={props.id || ''}>
         <div className='container'>
           <div className='row'>
+            <OwlCarousel className='owl-carousel' id='projects-carousel'>
+              <div className='col-lg-12'>
+                <div className='project-item'>
+                  <div className='project-comments'>
+                    <p>
+                      lorem lorem lorem lorem lorem
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </OwlCarousel>
           </div>
         </div>
       </section>
