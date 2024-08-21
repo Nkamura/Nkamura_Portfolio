@@ -33,7 +33,7 @@ export default function Projects(props) {
                     </p>
                   </div>
                   <div className="project-info">
-                    <img src="/public/png/fire.png" alt="python-picture"></img>
+                    <img src="/projects/Python.png" alt="python-picture"></img>
                     <h5>Project name</h5>
                     <p>
                       Language: Python
