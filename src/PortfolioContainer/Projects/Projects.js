@@ -34,7 +34,45 @@ export default function Projects(props) {
                   </div>
                   <div className="project-info">
                     <img src="/projects/Python.png" alt="python-picture"></img>
-                    <h5>Project name</h5>
+                    <h5>Automation with Python</h5>
+                    <p>
+                      Language: Python
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="col-lg-12">
+                <div className="project-item">
+                  <div className="project-comments">
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      College Project.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <h5>Automation with Python</h5>
+                    <p>
+                      Language: Python
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-12">
+                <div className="project-item">
+                  <div className="project-comments">
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      College Project.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <h5>Automation with Python</h5>
                     <p>
                       Language: Python
                     </p>
