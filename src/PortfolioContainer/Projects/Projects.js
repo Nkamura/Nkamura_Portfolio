@@ -16,13 +16,36 @@ export default function Projects(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
+
+  const options = {
+    loop: true,
+    margin: 0,
+    nav: true,
+    animateIn: "bounceInRight",
+    animateOut: "bounceOutRight",
+    dots: true.value,
+    autoplay: true,
+    smartSpeed: 850,
+    responsive:{
+      0:{
+        items:2,
+      },
+      768:{
+        items:2,
+      },
+      1000:{
+        items:4,
+      }
+    }
+  }
+
   return (
     <div>
       <ScreenHeading title={"Projects"} subHeading={"My projects"} />
       <section className="projects-section" id={props.id || ""}>
         <div className="container">
           <div className="row">
-            <OwlCarousel className="owl-carousel" id="projects-carousel">
+            <OwlCarousel className="owl-carousel" id="projects-carousel" {...options}>
               <div className="col-lg-12">
                 <div className="project-item">
                   <div className="project-comments">
@@ -42,6 +65,25 @@ export default function Projects(props) {
                 </div>
               </div>
               
+              <div className="col-lg-12">
+                <div className="project-item">
+                  <div className="project-comments">
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      College Project.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                  </div>
+                  <div className="project-info">
+                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <h5>Automation with Python</h5>
+                    <p>
+                      Language: Python
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="col-lg-12">
                 <div className="project-item">
                   <div className="project-comments">
