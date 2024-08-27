@@ -1,0 +1,8 @@
+.projects-section{
+    padding: 80px 0 80px;
+    background-image: url("../../../public/projects/bg2.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+}

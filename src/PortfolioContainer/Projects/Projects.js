@@ -7,6 +7,8 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 
+import './Projects.css'
+
 export default function Projects(props) {
   let fadeInScreenHandler = (screen) => {
     if (screen.FadeScreen !== props.id) return;
