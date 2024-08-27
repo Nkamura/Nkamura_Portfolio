@@ -6,6 +6,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+import shape from "../../../src/assets/projects/shape-bg.png";
+import pythonImage from '../../../src/assets/projects/Python.png';
 
 import './Projects.css'
 
@@ -58,7 +60,7 @@ export default function Projects(props) {
                     </p>
                   </div>
                   <div className="project-info">
-                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <img src={pythonImage} alt="python-picture"></img>
                     <h5>Automation with Python</h5>
                     <p>
                       Language: Python
@@ -77,7 +79,7 @@ export default function Projects(props) {
                     </p>
                   </div>
                   <div className="project-info">
-                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <img src={pythonImage} alt="python-picture"></img>
                     <h5>Automation with Python</h5>
                     <p>
                       Language: Python
@@ -96,7 +98,7 @@ export default function Projects(props) {
                     </p>
                   </div>
                   <div className="project-info">
-                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <img src={pythonImage} alt="python-picture"></img>
                     <h5>Automation with Python</h5>
                     <p>
                       Language: Python
@@ -115,7 +117,7 @@ export default function Projects(props) {
                     </p>
                   </div>
                   <div className="project-info">
-                    <img src="/projects/Python.png" alt="python-picture"></img>
+                    <img src={pythonImage} alt="python-picture"></img>
                     <h5>Automation with Python</h5>
                     <p>
                       Language: Python
@@ -127,6 +129,9 @@ export default function Projects(props) {
           </div>
         </div>
       </section>
+      <div className="footer-image">
+        <img src={shape} alt="Phot0 not responding" />
+      </div>
     </div>
   );
 }
