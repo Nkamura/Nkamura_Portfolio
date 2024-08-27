@@ -27,7 +27,7 @@ export default function Projects(props) {
     nav: true,
     animateIn: "bounceInRight",
     animateOut: "bounceOutRight",
-    dots: true.value,
+    dots: true,
     autoplay: true,
     smartSpeed: 850,
     responsive:{
@@ -38,7 +38,7 @@ export default function Projects(props) {
         items:2,
       },
       1000:{
-        items:4,
+        items:5,
       }
     }
   }

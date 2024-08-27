@@ -4,9 +4,17 @@
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    z-index: -1;
 }
 
+#projects-carousel {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 1%, black 93%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 1%, black 93%, transparent 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+  
+  
 .projects-section::before {
     content: "";
     position: absolute;
@@ -14,8 +22,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    opacity: 0.75;
+    z-index: 1;
+    opacity: 0.65;
     background-color: #1f2235;
 }
 
